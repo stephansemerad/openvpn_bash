@@ -3,14 +3,9 @@
 
 
 # Step 1 – Update your system
-
-sudo apt update -y
-sudo apt upgrade -y
-
+sudo apt update && upgrade -y
 
 # Step 2 – Find and note down your IP address
-
-
 my_ip=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
 echo $my_ip
 
